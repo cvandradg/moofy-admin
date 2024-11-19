@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@moofy/app": ["libs/moofy-admin/frontend/app/src/index.ts"],
+      "@moofy/login": ["libs/moofy-admin/frontend/login/src/index.ts"],
       "@moofy/shared": ["libs/moofy-admin/frontend/shared/src/index.ts"]
     }
   },
