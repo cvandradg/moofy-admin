@@ -3,7 +3,7 @@ import { MoofyFrontendAppComponent } from './moofy-frontend-app/moofy-frontend-a
 
 export const moofyFrontendAppRoutes: Route[] = [
   {
-    path: 'moofy-frontend-login',
+    path: '',
     loadChildren: () =>
       import('@moofy/login').then((m) => m.moofyFrontendLoginRoutes),
   },

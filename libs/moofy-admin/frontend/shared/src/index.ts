@@ -1,1 +1,1 @@
-export * from './lib/moofy-frontend-shared/moofy-frontend-shared.component';
+export * from './lib/exports/export-modules'
