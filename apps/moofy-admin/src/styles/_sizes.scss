@@ -1,7 +1,7 @@
-@use "@angular/material" as mat;
+@use '@angular/material' as mat;
 
 $densities: (
-  "sm":
+  'sm':
     mat.define-theme(
       (
         density: (
@@ -9,7 +9,7 @@ $densities: (
         ),
       )
     ),
-  "xs":
+  'xs':
     mat.define-theme(
       (
         density: (
@@ -17,7 +17,7 @@ $densities: (
         ),
       )
     ),
-  "xxs":
+  'xxs':
     mat.define-theme(
       (
         density: (
@@ -25,7 +25,7 @@ $densities: (
         ),
       )
     ),
-  "3xs":
+  '3xs':
     mat.define-theme(
       (
         density: (
@@ -33,7 +33,7 @@ $densities: (
         ),
       )
     ),
-  "4xs":
+  '4xs':
     mat.define-theme(
       (
         density: (
@@ -44,7 +44,7 @@ $densities: (
 );
 
 @each $name, $density in $densities {
-    .density-#{$name} {
-      @include mat.all-component-densities($density);
-    }
+  .density-#{$name} {
+    @include mat.all-component-densities($density);
   }
+}

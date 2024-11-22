@@ -9,6 +9,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './moofy-frontend-login.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MoofyFrontendLoginComponent {
-
-}
+export class MoofyFrontendLoginComponent {}

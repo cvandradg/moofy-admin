@@ -11,13 +11,17 @@
     [matMenuTriggerFor]="themeMenu"
   >
     <mat-icon>
-        {{(isDark$ | async) === true ? "dark_mode" : "light_mode" }} <!-- [!code highlight] -->
+      {{ (isDark$ | async) === true ? 'dark_mode' : 'light_mode' }}
+      <!-- [!code highlight] -->
     </mat-icon>
   </button>
   <mat-menu #themeMenu="matMenu">
-    <button mat-menu-item (click)="changeTheme('auto')">System</button><!-- [!code highlight] -->
-    <button mat-menu-item (click)="changeTheme('light')">Light</button><!-- [!code highlight] -->
-    <button mat-menu-item (click)="changeTheme('dark')">Dark</button><!-- [!code highlight] -->
+    <button mat-menu-item (click)="changeTheme('auto')">System</button
+    ><!-- [!code highlight] -->
+    <button mat-menu-item (click)="changeTheme('light')">Light</button
+    ><!-- [!code highlight] -->
+    <button mat-menu-item (click)="changeTheme('dark')">Dark</button
+    ><!-- [!code highlight] -->
   </mat-menu>
   <div class="demo-buttons">
     <button mat-button>Basic</button>

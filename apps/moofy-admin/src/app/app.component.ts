@@ -5,7 +5,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AsyncPipe } from '@angular/common';
 import { ThemeManager } from './core/theme-manager.service';
 
-
 @Component({
   standalone: true,
   imports: [MatButtonModule, MatIconModule, MatMenuModule, AsyncPipe],
