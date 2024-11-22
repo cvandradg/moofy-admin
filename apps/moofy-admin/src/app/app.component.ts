@@ -3,7 +3,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { AsyncPipe } from '@angular/common';
-import { ThemeManager } from './core/theme-manager.service';
+import { ThemeManager } from '@moofy/shared';
+
 
 @Component({
   standalone: true,

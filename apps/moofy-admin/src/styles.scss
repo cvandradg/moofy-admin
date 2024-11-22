@@ -1,7 +1,8 @@
+@use 'styles/sizes';
 @use '@angular/material' as mat;
-@use './styles/themes/all' as themes;
-@use './styles/themes/light.scss';
-@use './styles/sizes';
+@use 'styles/themes/light.scss';
+@use 'styles/themes/all'
+  as themes;
 
 @include mat.core();
 
