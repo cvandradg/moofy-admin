@@ -1,1 +1,28 @@
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+
+<!-- src/app/app.component.html -->
+
+<div>
+  <h1>Angular Material 3 Theming System: Complete Guide</h1>
+  <button
+    mat-icon-button
+    class="theme-toggle"
+    aria-label="Change theme"
+    [matMenuTriggerFor]="themeMenu"
+  >
+    <mat-icon>
+        {{(isDark$ | async) === true ? "dark_mode" : "light_mode" }} <!-- [!code highlight] -->
+    </mat-icon>
+  </button>
+  <mat-menu #themeMenu="matMenu">
+    <button mat-menu-item (click)="changeTheme('auto')">System</button><!-- [!code highlight] -->
+    <button mat-menu-item (click)="changeTheme('light')">Light</button><!-- [!code highlight] -->
+    <button mat-menu-item (click)="changeTheme('dark')">Dark</button><!-- [!code highlight] -->
+  </mat-menu>
+  <div class="demo-buttons">
+    <button mat-button>Basic</button>
+    <button mat-raised-button>Raised</button>
+    <button mat-stroked-button>Stroked</button>
+    <button mat-flat-button>Flat</button>
+  </div>
+</div>

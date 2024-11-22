@@ -1,21 +1,80 @@
-// src/styles.scss
-
 @use '@angular/material' as mat;
-@use 'themes/all' as themes;
+@use './styles/themes/all' as themes;
+@use './styles/themes/custom-theme';
+@use './styles/themes/light.scss';
+@use './styles/sizes';
 
 @include mat.core();
 
+// Apply Material themes using variables
+
 :root {
-  // @include mat.all-component-themes($my-app-theme);
+  // Material Theme definitions
   @include mat.core-theme(themes.$my-app-theme);
   @include mat.button-theme(themes.$my-app-theme);
+  @include mat.icon-theme(themes.$my-app-theme);
+  @include mat.menu-theme(themes.$my-app-theme);
+  @include mat.form-field-theme(themes.$my-app-theme);
+  @include mat.input-theme(themes.$my-app-theme);
+  // @include components.theme(themes.$my-app-theme);
+
+  @include mat.typography-hierarchy(themes.$my-app-theme);
+
+  // Map your CSS variables to Material system-level variables
+  // @include mat.system-level-colors(themes.$my-app-theme);
+  @include mat.system-level-typography(themes.$my-app-theme);
+
+  // Add your light theme variables here
+}
+
+// Dark theme lazy loading (if needed)
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include mat.core-color(themes.$my-app-dark-theme);
+    @include mat.button-color(themes.$my-app-dark-theme);
+  }
 }
 
 html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+// Customizing the button shape
+.button-rounded {
+  --border-radius: 16px;
+  --mdc-text-button-container-shape: var(--border-radius);
+  --mdc-protected-button-container-shape: var(--border-radius);
+  --mdc-outlined-button-container-shape: var(--border-radius);
+  --mdc-filled-button-container-shape: var(--border-radius);
+}
+
+// Customizing the button appearance using overrides API
+.overrides-example {
+  button {
+    @include mat.button-overrides(
+      (
+        filled-container-color: #00ff00,
+        filled-container-height: 64px,
+        filled-container-shape: 32px,
+        filled-label-text-color: orange,
+        filled-ripple-color: #ff0000,
+        outlined-outline-color: #0000ff,
+      )
+    );
+  }
+}
+
+// Adding color variants to the button using button-color API
+$color-variants: (secondary, tertiary);
+
+@each $variant in $color-variants {
+  .mat-#{$variant} {
+    @include mat.button-color(themes.$my-app-theme, $color-variant: $variant);
+  }
 }

@@ -1,0 +1,6 @@
+@use "@angular/material" as mat;
+@use "../../../../../m3-theme.scss";
+
+
+$my-app-theme: m3-theme.$light-theme;
+$my-app-dark-theme: m3-theme.$dark-theme;
