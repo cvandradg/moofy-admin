@@ -23,29 +23,33 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LetDirective, PushPipe } from '@ngrx/component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDividerModule } from '@angular/material/divider';
 
 export const MODULES = [
   PushPipe,
   FormsModule,
   CommonModule,
-  RouterModule,
   LetDirective,
+  RouterModule,
   MatCardModule,
-  MatTabsModule,
-  MatListModule,
   MatIconModule,
+  MatListModule,
   MatMenuModule,
-  MatInputModule,
+  MatTabsModule,
   MatRadioModule,
   MatInputModule,
   MatChipsModule,
-  MatButtonModule,
   MatSelectModule,
-  MatDialogModule,
   MatButtonModule,
-  MatToolbarModule,
+  MatDialogModule,
+  MatDividerModule,
   MatStepperModule,
   MatSidenavModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatSnackBarModule,
   MatCheckboxModule,
   MatFormFieldModule,
   ReactiveFormsModule,

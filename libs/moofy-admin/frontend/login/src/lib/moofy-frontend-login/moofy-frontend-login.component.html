@@ -1,24 +1,62 @@
-<div>
-  <h1>Angular Material 3 Theming System: Complete Guide</h1>
-  <button
-    mat-icon-button
-    class="theme-toggle"
-    aria-label="Change theme"
-    [matMenuTriggerFor]="themeMenu"
-  >
-    <mat-icon>
-      {{ (isDark$ | async) === true ? 'dark_mode' : 'light_mode' }}
-    </mat-icon>
-  </button>
-  <mat-menu #themeMenu="matMenu">
-    <button mat-menu-item (click)="changeTheme('auto')">System</button>
-    <button mat-menu-item (click)="changeTheme('light')">Light</button>
-    <button mat-menu-item (click)="changeTheme('dark')">Dark</button>
-  </mat-menu>
-  <div class="demo-buttons">
-    <button mat-button>Basic</button>
-    <button mat-raised-button>Raised</button>
-    <button mat-stroked-button>Stroked</button>
-    <button mat-flat-button>Flat</button>
+<div class="background-pattern"></div>
+
+<div class="login-container">
+  <div class="logo">
+    <span><img class="w-16" src="assets/img/logo.svg" /></span>
+
+    <span>Moofy</span>
   </div>
+
+  <fa-icon [icon]="['fab', 'google']"></fa-icon>
+
+  <form [formGroup]="loginInputForm" class="form-login-inputs">
+    <h3>Welcome back</h3>
+    <p>Sign in to with Google or credentials.</p>
+    <button mat-flat-button>Continue with Google</button>
+    <div class="divider">-or-</div>
+    <mat-form-field appearance="outline">
+      <mat-label>Enter your email</mat-label>
+      <input
+        matInput
+        placeholder="Placeholder"
+        [formControl]="email"
+        (blur)="updateErrorMessage()"
+        required
+      />
+      @if (email.invalid) {
+      <mat-error>{{ errorMessage() }}</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Enter your password</mat-label>
+      <input
+        matInput
+        placeholder="Placeholder"
+        [formControl]="password"
+        (blur)="updateErrorMessage()"
+        required
+      />
+      <button
+        mat-icon-button
+        extended
+        matSuffix
+        (click)="clickEvent($event)"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide()"
+      >
+        <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      <mat-hint>Click the eye to toggle visibility</mat-hint>
+    </mat-form-field>
+
+    <section class="example-section">
+      <mat-checkbox class="example-margin">Remember Me</mat-checkbox>
+      <div>Forgot Password?</div>
+    </section>
+
+    <button mat-flat-button>SIGN IN</button>
+
+    <p>Don't have an account? Create one here</p>
+  </form>
 </div>

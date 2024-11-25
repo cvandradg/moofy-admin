@@ -1,27 +1,69 @@
 html {
-  --md-sys-color-primary: rgb(64, 104, 53);
-  --md-sys-color-surface-tint: rgb(64, 104, 53);
-  --md-sys-color-on-primary: rgb(255, 255, 255);
-  --md-sys-color-primary-container: rgb(193, 239, 175);
-  --md-sys-color-on-primary-container: rgb(1, 34, 0);
-  --md-sys-color-secondary: rgb(84, 99, 77);
-  --md-sys-color-on-secondary: rgb(255, 255, 255);
-  --md-sys-color-secondary-container: rgb(215, 232, 204);
-  --md-sys-color-on-secondary-container: rgb(18, 31, 14);
-  --md-sys-color-tertiary: rgb(56, 102, 104);
-  --md-sys-color-on-tertiary: rgb(255, 255, 255);
-  --md-sys-color-tertiary-container: rgb(188, 235, 238);
-  --md-sys-color-on-tertiary-container: rgb(0, 32, 33);
-  --md-sys-color-error: rgb(186, 26, 26);
-  --md-sys-color-on-error: rgb(255, 255, 255);
-  --md-sys-color-background: rgb(248, 251, 240);
-  --md-sys-color-on-background: rgb(25, 29, 23);
-  --md-sys-color-surface: rgb(248, 251, 240);
-  --md-sys-color-on-surface: rgb(25, 29, 23);
-  --md-sys-color-surface-variant: rgb(223, 228, 215);
-  --md-sys-color-on-surface-variant: rgb(67, 72, 63);
-  --md-sys-color-outline: rgb(115, 121, 110);
-  --md-sys-color-inverse-surface: rgb(46, 50, 43);
-  --md-sys-color-inverse-on-surface: rgb(239, 242, 232);
-  --md-sys-color-inverse-primary: rgb(166, 211, 149);
+  --mat-sys-primary: rgb(63, 81, 181); /* Indigo */
+  --mat-sys-surface-tint: rgb(48, 63, 159); /* Darker Indigo */
+  --mat-sys-on-primary: rgb(255, 255, 255); /* White for contrast */
+  --mat-sys-primary-container: rgb(197, 202, 233); /* Light Indigo */
+  --mat-sys-on-primary-container: rgb(26, 35, 126); /* Deep Indigo */
+  
+  --mat-sys-secondary: rgb(156, 39, 176); /* Purple */
+  --mat-sys-on-secondary: rgb(255, 255, 255); /* White for contrast */
+  --mat-sys-secondary-container: rgb(225, 190, 231); /* Light Purple */
+  --mat-sys-on-secondary-container: rgb(74, 20, 140); /* Deep Purple */
+  
+  --mat-sys-tertiary: rgb(3, 169, 244); /* Light Blue */
+  --mat-sys-on-tertiary: rgb(255, 255, 255); /* White for contrast */
+  --mat-sys-tertiary-container: rgb(187, 222, 251); /* Pale Blue */
+  --mat-sys-on-tertiary-container: rgb(1, 87, 155); /* Dark Blue */
+  
+  --mat-sys-error: rgb(229, 57, 53); /* Red for errors */
+  --mat-sys-on-error: rgb(255, 255, 255); /* White for contrast */
+  --mat-sys-error-container: rgb(255, 205, 210); /* Light Red */
+  --mat-sys-on-error-container: rgb(105, 0, 0); /* Deep Red */
+  
+  --mat-sys-background: rgb(250, 250, 250); /* Very Light Gray */
+  --mat-sys-on-background: rgb(33, 33, 33); /* Dark Gray for text */
+  
+  --mat-sys-surface: rgb(255, 255, 255); /* White for clean look */
+  --mat-sys-on-surface: rgb(66, 66, 66); /* Medium Gray for text */
+  --mat-sys-surface-variant: rgb(238, 238, 238); /* Light Gray */
+  --mat-sys-on-surface-variant: rgb(97, 97, 97); /* Medium Gray */
+  
+  --mat-sys-outline: rgb(189, 189, 189); /* Light Border Gray */
+  --mat-sys-outline-variant: rgb(224, 224, 224); /* Slightly lighter border */
+  
+  --mat-sys-shadow: rgba(0, 0, 0, 0.24); /* Light Shadow */
+  --mat-sys-scrim: rgba(0, 0, 0, 0.32); /* Semi-transparent overlay */
+  
+  --mat-sys-inverse-surface: rgb(48, 48, 48); /* Dark Gray */
+  --mat-sys-inverse-on-surface: rgb(236, 239, 241); /* Light Gray Text */
+  --mat-sys-inverse-primary: rgb(144, 202, 249); /* Sky Blue */
+  
+  --mat-sys-primary-fixed: rgb(197, 202, 233); /* Light Indigo */
+  --mat-sys-on-primary-fixed: rgb(26, 35, 126); /* Deep Indigo */
+  --mat-sys-primary-fixed-dim: rgb(159, 168, 218); /* Medium Indigo */
+  --mat-sys-on-primary-fixed-variant: rgb(48, 63, 159); /* Dark Indigo */
+  
+  --mat-sys-secondary-fixed: rgb(225, 190, 231); /* Light Purple */
+  --mat-sys-on-secondary-fixed: rgb(74, 20, 140); /* Deep Purple */
+  --mat-sys-secondary-fixed-dim: rgb(206, 147, 216); /* Medium Purple */
+  --mat-sys-on-secondary-fixed-variant: rgb(123, 31, 162); /* Violet */
+  
+  --mat-sys-tertiary-fixed: rgb(187, 222, 251); /* Pale Blue */
+  --mat-sys-on-tertiary-fixed: rgb(1, 87, 155); /* Dark Blue */
+  --mat-sys-tertiary-fixed-dim: rgb(144, 202, 249); /* Sky Blue */
+  --mat-sys-on-tertiary-fixed-variant: rgb(2, 136, 209); /* Blue */
+  
+  --mat-sys-surface-dim: rgb(240, 240, 240); /* Light Gray */
+  --mat-sys-surface-bright: rgb(255, 255, 255); /* White */
+  --mat-sys-surface-container-lowest: rgb(245, 245, 245); /* Lightest Gray */
+  --mat-sys-surface-container-low: rgb(250, 250, 250); /* Very Light Gray */
+  --mat-sys-surface-container: rgb(245, 245, 245); /* Light Gray */
+  --mat-sys-surface-container-high: rgb(238, 238, 238); /* Light Gray */
+  --mat-sys-surface-container-highest: rgb(230, 230, 230); /* Darker Light Gray */
+}
+
+html,
+body {
+  background-color: var(--sys-surface-variant);
+  color: var(--sys-primary);
 }
