@@ -1,4 +1,4 @@
-import { Directive, NgModule } from '@angular/core';
+import { Component, Directive, NgModule } from '@angular/core';
 
 import {
   FaIconLibrary,
@@ -119,53 +119,3 @@ export class Fontawesome {
     );
   }
 }
-
-// export const fontAwesomeProviders = [
-//   provideFaIconLibrary(() => ({
-//     icons: [
-//       faJar,
-//       faBolt,
-//       faPlus,
-//       faUser,
-//       faBars,
-//       faXmark,
-//       faSalad,
-//       faCheck,
-//       faShirt,
-//       faPerson,
-//       faGoogle,
-//       faTurkey,
-//       faFilePen,
-//       faPeanuts,
-//       faPotFood,
-//       faTwitter,
-//       faDumbbell,
-//       faTrashCan,
-//       faBowlRice,
-//       faGripLines,
-//       faDrumstick,
-//       faLayerPlus,
-//       faTelescope,
-//       faFacebookF,
-//       faHouseTree,
-//       faInstagram,
-//       faCaretRight,
-//       faArrowRight,
-//       faXmarkSolid,
-//       faRotateBack,
-//       faHeartPulse,
-//       faPersonDress,
-//       faCircleNotch,
-//       faSpinnerThird,
-//       faBookOpenCover,
-//       faPlateUtensils,
-//       faRightToBracket,
-//       faWhatsappSquare,
-//       faPersonDollyEmpty,
-//       faClipboardQuestion,
-//       faMessageExclamation,
-//       faEnvelopeCircleCheck,
-//       faCommentsQuestionCheck,
-//     ], // Shared configuration
-//   })),
-// ];
